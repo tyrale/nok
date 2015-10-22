@@ -1,0 +1,25 @@
+{
+  "name": "nok",
+  "version": "1.0.0",
+  "description": "nok page build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyrale/nok.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyrale/nok/issues"
+  },
+  "homepage": "https://github.com/tyrale/nok#readme",
+  "devDependencies": {
+    "broccoli": "^0.16.8",
+    "broccoli-jade": "^1.1.0",
+    "broccoli-stew": "^0.3.6",
+    "broccoli-stylus": "^3.0.0"
+  }
+}
