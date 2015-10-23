@@ -1,31 +1,37 @@
 // export the build process
-module.exports = function (broc) {
 
-  // get build systems
-  var jade = require('broccoli-jade');
-  var stylus = require('broccoli-stylus');
+// get build systems
+var merge = require('broccoli-merge-trees');
+var Funnel = require('broccoli-funnel');
 
-
-  // roots
-  var stylesTree = broc.makeTree('styles');
-  var templatesRoot = broc.makeTree('templates');
-  var scriptsRoot = 'javascripts';
+var jade = require('broccoli-jade');
+var stylus = require('broccoli-stylus');
 
 
-  //////////
-  // HTML //
-  //////////
+// roots
+var stylesTree = new Funnel('src/styles');
+var templTree = new Funnel('src/templates', {
+  exclude: ['includes/**/*']
+});
+var scriptsRoot = 'javascripts';
 
-  var html = jade(templTree, {});
 
-  /////////
-  // CSS //
-  /////////
+//////////
+// HTML //
+//////////
 
-  var css = stylus(stylesTree, {});
+var html = jade(templTree, {});
 
-  ////////////////
-  // JavaScript //
-  ////////////////
+/////////
+// CSS //
+/////////
 
-};
+var css = stylus(stylesTree, {});
+
+////////////////
+// JavaScript //
+////////////////
+
+
+
+module.exports = merge([html, css]);
