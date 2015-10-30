@@ -16,7 +16,9 @@
   transition: all 0.3s ease
   padding-top: rem(140)
   .mark
-    padding: 0 rem(140)
+    padding: 0 rem(40)
+    +media($medium-screen)
+      padding: 0 rem(140)
     img
       +size(15rem inherit)
       margin: 0 auto
