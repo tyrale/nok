@@ -382,11 +382,12 @@ h1 {
   text-align: center; }
 
 h2 {
-  font-size: 2.125em;
+  font-size: 3.125rem;
   color: black;
   font-weight: 900;
   line-height: 1.4em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-align: center; }
 
 p {
   font-weight: 300;
@@ -470,22 +471,6 @@ textarea {
   appearance: none;
   height: 200px; }
 
-body {
-  background-color: #1f1f1f; }
-  body > label {
-    position: fixed;
-    z-index: 10;
-    height: 100px;
-    width: 100px; }
-
-input[type=checkbox] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px; }
-
-/* For mobile, it's typically better to position checkbox on top of clickable
- * area and turn opacity to 0 instead. */
-/* Default State */
 #paper {
   height: 100vh;
   width: 100vw;
@@ -502,89 +487,44 @@ input[type=checkbox] {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   transform-origin: 50% 89%;
   transition: all 0.3s ease;
-  height: 200vh; }
-
-/* Toggled State */
-input[type=checkbox]:checked ~ #paper {
-  overflow: hidden;
-  pointer-events: none; }
-
-input[type=checkbox]:checked ~ #paper #paper-front {
-  transform: rotate(10deg) translateZ(0); }
-
-#background {
-  position: fixed; }
-  #background p {
-    color: white; }
-
-#paper-front {
-  padding: 8.75rem; }
-  #paper-front .mark img {
-    width: 15rem;
-    margin: 0 auto;
-    display: block; }
-  #paper-front .mark h2 {
-    text-align: center;
-    font-size: 3.125rem;
-    margin-top: -0.625rem; }
+  padding-top: 8.75rem; }
+  #paper-front .mark {
+    padding: 0 8.75rem; }
+    #paper-front .mark img {
+      width: 15rem;
+      margin: 0 auto;
+      display: block; }
+    #paper-front .mark h2 {
+      text-align: center;
+      margin-top: -0.625rem; }
   #paper-front h1 {
     margin-top: 2.5rem;
     margin-bottom: 3.75rem; }
   #paper-front .nok-side {
-    height: 300px;
-    width: 20px;
+    height: 210px;
+    width: 16px;
     margin: 0 auto;
     display: block;
-    background: black; }
-
-.hamburger {
-  position: fixed;
-  z-index: 4;
-  top: 30px;
-  left: 30px;
-  width: 45px;
-  height: 34px;
-  cursor: pointer;
-  user-select: none; }
-  .hamburger span {
+    background: black;
     position: relative; }
-    .hamburger span, .hamburger span:before, .hamburger span:after {
-      display: block;
-      width: 45px;
-      height: 6px;
-      background-color: black;
-      border-radius: 2px; }
-    .hamburger span:before, .hamburger span:after {
-      content: "";
-      position: absolute; }
-    .hamburger span:before {
-      bottom: -14px; }
-    .hamburger span:after {
-      bottom: -28px; }
+    #paper-front .nok-side p {
+      position: absolute;
+      bottom: 0;
+      left: 30px;
+      width: 200px; }
 
-.close {
+#background {
   position: fixed;
-  top: 30px;
-  left: 30px;
-  width: 45px;
-  height: 34px;
-  cursor: pointer; }
-  .close:before, .close:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 45px;
-    height: 6px;
-    top: 50%;
-    background-color: white;
-    border-radius: 2px; }
-  .close:before {
-    transform: translateY(-50%) rotate(45deg); }
-  .close:after {
-    transform: translateY(-50%) rotate(-45deg); }
+  padding: 5.625rem 2.5rem; }
+  #background p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700; }
 
 .slide-wrapper {
-  margin-top: 7.5rem; }
+  margin-top: 7.5rem;
+  max-width: 75rem;
+  margin: 0 auto; }
 
 .sss {
   height: 0;
@@ -635,3 +575,93 @@ input[type=checkbox]:checked ~ #paper #paper-front {
 
 .sssprev:hover, .sssnext:hover {
   cursor: pointer; }
+
+body {
+  background-color: #1f1f1f; }
+  body > label {
+    position: fixed;
+    z-index: 10;
+    height: 100px;
+    width: 100px; }
+
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+
+/* For mobile, it's typically better to position checkbox on top of clickable
+ * area and turn opacity to 0 instead. */
+/* Default State */
+/* Toggled State */
+input[type=checkbox]:checked ~ #paper {
+  overflow: hidden;
+  pointer-events: none; }
+
+input[type=checkbox]:checked ~ #paper #paper-front {
+  transform: rotate(10deg) translateZ(0); }
+
+.hamburger {
+  position: fixed;
+  z-index: 4;
+  top: 30px;
+  left: 30px;
+  width: 45px;
+  height: 34px;
+  cursor: pointer;
+  user-select: none; }
+  .hamburger span {
+    position: relative; }
+    .hamburger span, .hamburger span:before, .hamburger span:after {
+      display: block;
+      width: 45px;
+      height: 6px;
+      background-color: black;
+      border-radius: 2px; }
+    .hamburger span:before, .hamburger span:after {
+      content: "";
+      position: absolute; }
+    .hamburger span:before {
+      bottom: -14px; }
+    .hamburger span:after {
+      bottom: -28px; }
+
+.close {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 45px;
+  height: 34px;
+  cursor: pointer; }
+  .close:before, .close:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 6px;
+    top: 50%;
+    background-color: white;
+    border-radius: 2px; }
+  .close:before {
+    transform: translateY(-50%) rotate(45deg); }
+  .close:after {
+    transform: translateY(-50%) rotate(-45deg); }
+
+.feature-wrapper {
+  margin-top: 3.75rem; }
+
+.order-nok {
+  background-color: black;
+  min-height: 18.75rem;
+  padding-top: 5.3125rem; }
+  .order-nok button {
+    height: 140px;
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 900;
+    line-height: 1.4em;
+    margin-bottom: 0;
+    text-align: center; }

@@ -1,0 +1,73 @@
+body
+  background-color: $client-light
+  > label
+    +position(fixed)
+    z-index: 10
+    +size(100px)
+
+input[type=checkbox]
+  position: absolute
+  top: -9999px
+  left: -9999px
+/* For mobile, it's typically better to position checkbox on top of clickable
+  area and turn opacity to 0 instead. */
+/* Default State */
+
+/* Toggled State */
+input[type=checkbox]:checked ~ #paper
+  overflow: hidden
+  pointer-events: none
+
+input[type=checkbox]:checked ~ #paper #paper-front
+  transform: rotate(10deg) translateZ(0)
+
+  
+.hamburger
+  position: fixed
+  z-index: 4
+  top: 30px
+  left: 30px
+  width: 45px
+  height: 34px
+  cursor: pointer
+  user-select: none
+  span
+    position: relative
+
+    &, &:before, &:after
+      display: block
+      width: 45px
+      height: 6px
+      background-color: $client-black
+      border-radius: 2px
+    &:before, &:after
+      content: ''
+      position: absolute
+
+    &:before
+      bottom: -14px
+    &:after
+      bottom: -28px
+
+.close
+  position: fixed
+  top: 30px
+  left: 30px
+  width: 45px
+  height: 34px
+  cursor: pointer
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 45px
+    height: 6px
+    top: 50%
+    background-color: white
+    border-radius: 2px
+
+  &:before
+    transform: translateY(-50%) rotate(45deg)
+  &:after
+    transform: translateY(-50%) rotate(-45deg)
