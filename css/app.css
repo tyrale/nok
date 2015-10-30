@@ -518,7 +518,10 @@ textarea {
 
 #background {
   position: fixed;
-  padding: 5.625rem 2.5rem; }
+  padding: 5.625rem 1.25rem; }
+  @media screen and (min-width: 40em) {
+    #background {
+      padding: 5.625rem 2.5rem; } }
   #background p {
     color: white;
     font-size: 1.375rem;
@@ -634,10 +637,13 @@ input[type=checkbox]:checked ~ #paper #paper-front {
 .close {
   position: fixed;
   top: 30px;
-  left: 30px;
+  left: 20px;
   width: 45px;
   height: 34px;
   cursor: pointer; }
+  @media screen and (min-width: 40em) {
+    .close {
+      left: 30px; } }
   .close:before, .close:after {
     content: "";
     position: absolute;

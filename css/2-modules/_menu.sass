@@ -21,7 +21,7 @@ input[type=checkbox]:checked ~ #paper
 input[type=checkbox]:checked ~ #paper #paper-front
   transform: rotate(10deg) translateZ(0)
 
-  
+
 .hamburger
   position: fixed
   z-index: 4
@@ -52,7 +52,9 @@ input[type=checkbox]:checked ~ #paper #paper-front
 .close
   position: fixed
   top: 30px
-  left: 30px
+  left: 20px
+  +media($medium-screen)
+    left: 30px
   width: 45px
   height: 34px
   cursor: pointer
