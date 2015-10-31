@@ -716,3 +716,8 @@ input[type=checkbox]:checked ~ #paper #paper-front {
     font-size: 1.125rem;
     font-weight: 600;
     opacity: 0.5; }
+    @media screen and (min-width: 40em) {
+      .about p {
+        width: 400px;
+        margin: 0 auto 1.25rem;
+        display: block; } }
