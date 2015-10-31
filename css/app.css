@@ -472,6 +472,7 @@ textarea {
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   z-index: 2; }
 
 #paper-front {
@@ -696,9 +697,9 @@ input[type=checkbox]:checked ~ #paper #paper-front {
     width: 300px;
     margin: 0 auto;
     display: block;
-    background-color: white;
+    background-color: #00d087;
     font-size: 2rem;
-    color: black;
+    color: white;
     font-weight: 900;
     line-height: 0.625rem;
     margin-bottom: 0;
