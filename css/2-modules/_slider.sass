@@ -1,4 +1,17 @@
+.grid
+  display: block
+  margin-top: rem(120)
+  img
+    width: 100%
+    margin: rem(20) 0
+  +media($medium-screen)
+    display: none
+
 .slide-wrapper
+  +media($small-screen)
+    display: none
+  +media($medium-screen)
+    display: block
   margin-top: rem(120)
   margin: rem(60) auto 0
 .sss

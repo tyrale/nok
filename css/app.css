@@ -529,9 +529,25 @@ textarea {
       #background p {
         font-size: 1.5rem; } }
 
+.grid {
+  display: block;
+  margin-top: 7.5rem; }
+  .grid img {
+    width: 100%;
+    margin: 1.25rem 0; }
+  @media screen and (min-width: 40em) {
+    .grid {
+      display: none; } }
+
 .slide-wrapper {
   margin-top: 7.5rem;
   margin: 3.75rem auto 0; }
+  @media screen and (min-width: 20em) {
+    .slide-wrapper {
+      display: none; } }
+  @media screen and (min-width: 40em) {
+    .slide-wrapper {
+      display: block; } }
 
 .sss {
   height: 0;
