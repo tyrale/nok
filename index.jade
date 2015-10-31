@@ -26,7 +26,7 @@ body.tk-proxima-nova
 			.mark
 				img(src="img/mark.svg", alt="")
 				h2.tk-proxima-nova says hello.
-			h1.tk-proxima-nova 1 The seemingly impossible, small 
+			h1.tk-proxima-nova The seemingly impossible, small 
 				strike wallet
 				|  nok.
 			.nok-side
@@ -44,5 +44,16 @@ body.tk-proxima-nova
 			.feature-wrapper
 				.features
 					h2.tk-proxima-nova Features
+					ul
+						mixin feature(place, words)
+							li
+								p
+									span= place 
+									= words
+						+feature('1. ', 'Super lightweight.')
+						+feature('2. ', 'Water-proof.')
+						+feature('3. ', 'No weak leather.')
+						+feature('4. ', 'Affordable.')
+						+feature('5. ', '58 x 90 x 5mm')
 			.order-nok
 				button#customButton.tk-proxima-nova order nok $8

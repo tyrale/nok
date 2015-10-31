@@ -392,11 +392,6 @@ h2 {
 p {
   font-weight: 300;
   margin-top: 0px; }
-  p.step {
-    color: #7f7f7f;
-    font-size: 15px;
-    text-transform: uppercase;
-    margin-bottom: 8px; }
 
 select {
   background: white;
@@ -501,24 +496,28 @@ textarea {
       text-align: center;
       margin-top: -0.625rem; }
   #paper-front h1 {
+    padding: 1.25rem;
     margin-top: 2.5rem;
     margin-bottom: 3.75rem; }
+    @media screen and (min-width: 40em) {
+      #paper-front h1 {
+        padding: 0rem; } }
   #paper-front .nok-side {
-    height: 210px;
-    width: 16px;
+    height: 370px;
+    width: 28px;
     margin: 0 auto;
     display: block;
     background: black;
     position: relative; }
     #paper-front .nok-side p {
       position: absolute;
-      bottom: 0;
-      left: 30px;
+      bottom: -16px;
+      left: 40px;
       width: 200px; }
 
 #background {
   position: fixed;
-  padding: 5.625rem 0.625rem; }
+  padding: 5.625rem 1.25rem; }
   @media screen and (min-width: 40em) {
     #background {
       padding: 5.625rem 2.5rem; } }
@@ -532,8 +531,7 @@ textarea {
 
 .slide-wrapper {
   margin-top: 7.5rem;
-  max-width: 75rem;
-  margin: 0 auto; }
+  margin: 3.75rem auto 0; }
 
 .sss {
   height: 0;
@@ -586,6 +584,7 @@ textarea {
   cursor: pointer; }
 
 body {
+  color: black;
   background-color: #1f1f1f; }
   body > label {
     position: fixed;
@@ -660,20 +659,31 @@ input[type=checkbox]:checked ~ #paper #paper-front {
 
 .feature-wrapper {
   margin-top: 3.75rem; }
+  .feature-wrapper ul {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 5rem; }
+    .feature-wrapper ul li p {
+      font-weight: 900;
+      font-weight: 600;
+      margin-bottom: 1.25rem; }
+      .feature-wrapper ul li p span {
+        opacity: 0.5; }
 
 .order-nok {
   background-color: black;
-  min-height: 18.75rem;
-  padding-top: 5.3125rem; }
+  min-height: 12.5rem;
+  padding-top: 3.4375rem; }
   .order-nok button {
-    height: 140px;
-    width: 400px;
+    height: 100px;
+    width: 300px;
     margin: 0 auto;
     display: block;
     background-color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     font-weight: 900;
-    line-height: 1.4em;
+    line-height: 0.625rem;
     margin-bottom: 0;
     text-align: center; }

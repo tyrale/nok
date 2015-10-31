@@ -28,16 +28,17 @@
       margin-top: rem(-10)
   h1
     padding: rem(20)
-    $media($medium-screen)
+    +media($medium-screen)
       padding: rem(0)
     margin-top: rem(40)
     margin-bottom: rem(60)
+
   .nok-side
-    +size(16px 210px)
+    +size(28px 370px)
     margin: 0 auto
     display: block
     background: $client-black
     +position(relative)
     p
-      +position(absolute, null null 0 30px)
+      +position(absolute, null null -16px 40px)
       width: 200px
