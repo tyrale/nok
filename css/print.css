@@ -393,6 +393,9 @@ p {
   font-weight: 300;
   margin-top: 0px; }
 
+a {
+  color: #00d087; }
+
 select {
   background: white;
   width: 100%;
