@@ -695,7 +695,7 @@ input[type=checkbox]:checked ~ #paper #paper-front {
   background-color: black;
   min-height: 12.5rem;
   padding-top: 3.4375rem; }
-  .order-nok button {
+  .order-nok .button {
     height: 100px;
     width: 300px;
     margin: 0 auto;

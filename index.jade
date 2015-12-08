@@ -1,74 +1,80 @@
 doctype html
 html(lang="en")
-	include ./inc/head.jade
+  include ./inc/head.jade
 
 body.tk-proxima-nova
-	label(for="toggle-1")
-	input(type="checkbox" id="toggle-1")
-	#background
-		.close
-		p.tk-proxima-nova The Danish define
-			br
-			| enough as &ldquo;nok&rdquo;.
-			br
-			br
-			| Which is precisely
-			br
-			| what nok is.
-			br
-			br
-			| No more.
-	#paper
-		#paper-front
-			.hamburger
-				span
-			
-			.mark
-				img(src="img/mark.svg", alt="")
-				h2.tk-proxima-nova says hello.
-			h1.tk-proxima-nova The seemingly, impossibly, small 
-				br
-				strike wallet
-				|  nok.
-			.nok-side
-				p *actual size
-			.slide-wrapper
-				.slider
-					img(src="img/one.jpg", alt="")
-					img(src="img/two.jpg", alt="")
-					img(src="img/three.jpg", alt="")
-					img(src="img/four.jpg", alt="")
-					img(src="img/five.jpg", alt="")
-					img(src="img/six.jpg", alt="")
-			.grid
-				img(src="img/one.jpg", alt="")
-				img(src="img/two.jpg", alt="")
-				img(src="img/three.jpg", alt="")
-				img(src="img/four.jpg", alt="")
-				img(src="img/five.jpg", alt="")
-				img(src="img/six.jpg", alt="")
-				
-			.feature-wrapper
-				.features
-					h2.tk-proxima-nova Features
-					ul
-						mixin feature(place, words)
-							li
-								p
-									span= place 
-									= words
-						+feature('1. ', 'Super lightweight.')
-						+feature('2. ', 'Water-proof.')
-						+feature('3. ', 'No weak leather.')
-						+feature('4. ', 'Affordable.')
-						+feature('5. ', '58 x 90 x 5mm')
-			.order-nok
-				button#customButton.tk-proxima-nova order nok $8
-			.about
-				p We design and build with a focus on products that serve one function.
-				p With nok we set out to make a wallet that carries ONLY what you need. With room for up to 3 cards and 1 ID, it only weighs 1 gram.
-				p Plus, a pocket for cash.
-				p nok is the result of a deliberate &amp; relentless pursuit of pure functionality.
-				p We are AddSubtract +/-.
-				p
-					a(href="mailto:hello@ordernok.com") Contact Us
+  label(for="toggle-1")
+  input(type="checkbox" id="toggle-1")
+  #background
+    .close
+    p.tk-proxima-nova The Danish define
+      br
+      | enough as &ldquo;nok&rdquo;.
+      br
+      br
+      | Which is precisely
+      br
+      | what nok is.
+      br
+      br
+      | No more.
+  #paper
+    #paper-front
+      .hamburger
+        span
+      
+      .mark
+        img(src="img/mark.svg", alt="")
+        h2.tk-proxima-nova says hello.
+      h1.tk-proxima-nova The seemingly, impossibly, small 
+        br
+        strike wallet
+        |  nok.
+      .nok-side
+        p *actual size
+      .slide-wrapper
+        .slider
+          img(src="img/one.jpg", alt="")
+          img(src="img/two.jpg", alt="")
+          img(src="img/three.jpg", alt="")
+          img(src="img/four.jpg", alt="")
+          img(src="img/five.jpg", alt="")
+          img(src="img/six.jpg", alt="")
+      .grid
+        img(src="img/one.jpg", alt="")
+        img(src="img/two.jpg", alt="")
+        img(src="img/three.jpg", alt="")
+        img(src="img/four.jpg", alt="")
+        img(src="img/five.jpg", alt="")
+        img(src="img/six.jpg", alt="")
+        
+      .feature-wrapper
+        .features
+          h2.tk-proxima-nova Features
+          ul
+            mixin feature(place, words)
+              li
+                p
+                  span= place 
+                  = words
+            +feature('1. ', 'Super lightweight.')
+            +feature('2. ', 'Water-proof.')
+            +feature('3. ', 'No weak leather.')
+            +feature('4. ', 'Affordable.')
+            +feature('5. ', '58 x 90 x 5mm')
+      .order-nok
+        form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+          input(type='hidden', name='cmd', value='_s-xclick')
+          input(type='hidden', name='hosted_button_id', value='UYL6CHP8CWV5A')
+          input.button.tk-proxima-nova(type='submit', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!', value='Order a nok $10')
+          img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
+
+
+      .about
+        p We design and build with a focus on products that serve one function.
+        p With nok we set out to make a wallet that carries ONLY what you need. With room for up to 3 cards and 1 ID, it only weighs 1 gram.
+        p Plus, a pocket for cash.
+        p nok is the result of a deliberate &amp; relentless pursuit of pure functionality.
+        p We are AddSubtract +/-.
+        p
+          a(href="mailto:hello@ordernok.com") Contact Us
