@@ -507,8 +507,8 @@ textarea {
       #paper-front h1 {
         padding: 0rem; } }
   #paper-front .nok-side {
-    height: 370px;
-    width: 28px;
+    height: 210px;
+    width: 18px;
     margin: 0 auto;
     display: block;
     background: black;
@@ -721,3 +721,5 @@ input[type=checkbox]:checked ~ #paper #paper-front {
         width: 400px;
         margin: 0 auto 1.3125rem;
         display: block; } }
+
+/*# sourceMappingURL=app.css.map */
