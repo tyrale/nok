@@ -546,7 +546,7 @@ textarea {
 .slide-wrapper {
   margin-top: 7.5rem;
   margin: 3.75rem auto 0;
-  padding: 15rem; }
+  padding: 5rem 15rem; }
   @media screen and (min-width: 20em) {
     .slide-wrapper {
       display: none; } }
