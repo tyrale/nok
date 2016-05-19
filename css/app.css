@@ -709,6 +709,10 @@ input[type=checkbox]:checked ~ #paper #paper-front {
     margin-bottom: 0;
     text-align: center; }
 
+.white {
+  color: white !important;
+  padding-bottom: 3.75rem; }
+
 .about {
   background-color: black;
   padding: 0 2.5rem 5rem; }
